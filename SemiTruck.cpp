@@ -3,6 +3,8 @@
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n) { }
 
+SemiTruck::~SemiTruck() { }
+
 void SemiTruck::pressTheBuzzer()
 {
     setSpeed(85);

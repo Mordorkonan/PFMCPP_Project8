@@ -3,10 +3,9 @@
 #include <cassert>
 #include "Highway.h"
 
-HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol")
-{
+HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol") { }
 
-}
+HighwayPatrol::~HighwayPatrol() { }
 
 void HighwayPatrol::scanHighway(Highway* h)
 {
