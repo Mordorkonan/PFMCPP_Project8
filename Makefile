@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp
+	g++ main.cpp Motorcycle.cpp Car.cpp Highway.cpp HighwayPatrol.cpp
