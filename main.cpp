@@ -151,6 +151,19 @@ int main()
     motorcycles.emplace_back("Yamaha");
     motorcycles.emplace_back("Ural");
 
+    for (auto& truck : trucks)
+    {
+        highway.addVehicle(&truck);
+    }
+    for (auto& mc : motorcycles)
+    {
+        highway.addVehicle(&mc);
+    }
+    for (auto& car : cars)
+    {
+        highway.addVehicle(&car);
+    }
+    
     HighwayPatrol cop;
     cop.scanHighway(&highway);
 
