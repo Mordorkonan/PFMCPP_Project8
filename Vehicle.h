@@ -19,5 +19,6 @@ struct Vehicle
 protected:
     int speed = 0;
     std::string name;
+    std::string vType = "vehicle";
     friend HighwayPatrol;
 };
