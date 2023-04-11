@@ -28,20 +28,21 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
 {
     std::cout << "\n\n";
     std::cout << name << ": vehicle is traveling " << v->speed - h->speedLimit << " miles per hour over the speed limit" << std::endl;
+    std::string vType = "Vehicle";
     if( willArrest )
     {
         //assert(false);
         if (auto* v_car = dynamic_cast<Car*>(v))
         {
-            std::string vType = "Car";
+            vType = "Car";
         }
         else if (auto* v_mc = dynamic_cast<Motorcycle*>(v))
         {
-            std::string vType = "Motorcycle";
+            vType = "Motorcycle";
         }
         else if (auto* v_st = dynamic_cast<SemiTruck*>(v))
         {
-            std::string vType = "SemiTruck";
+            vType = "SemiTruck";
         }
         //print the vehicle type in this std::cout between "THE [" and "] PULL". 
         std::cout << name << ": YOU IN THE [ " << vType << " ] PULL OVER AND SHOW YOUR HANDS" << std::endl;
