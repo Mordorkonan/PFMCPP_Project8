@@ -5,6 +5,7 @@
 struct Car : Vehicle
 {
     Car(const std::string& s);
+    Car(const Car&);
     ~Car() override;
     void closeWindows();
 

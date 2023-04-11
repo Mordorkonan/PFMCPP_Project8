@@ -4,6 +4,8 @@
 
 Car::Car(const std::string& n) : Vehicle(n) { }
 
+Car::Car(const Car& car) : Vehicle(car.name) { }
+
 Car::~Car() { }
 
 void Car::closeWindows()

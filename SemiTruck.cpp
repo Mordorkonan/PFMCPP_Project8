@@ -3,6 +3,8 @@
 
 SemiTruck::SemiTruck(const std::string& n) : Vehicle(n) { }
 
+SemiTruck::SemiTruck(const SemiTruck& truck) : Vehicle(truck.name) { }
+
 SemiTruck::~SemiTruck() { }
 
 void SemiTruck::pressTheBuzzer()
