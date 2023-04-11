@@ -5,9 +5,10 @@
 struct Car : Vehicle
 {
     Car(const std::string& s);
-    Car(const Car&);
-    ~Car() override;
-    void closeWindows();
+    Car(const Car&) = default;
+    ~Car() override = default;
+    Car& operator=(const Car&) = default;
 
+    void closeWindows();
     void tryToEvade() override;
 };

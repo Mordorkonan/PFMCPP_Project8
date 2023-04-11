@@ -5,8 +5,10 @@
 struct SemiTruck : Vehicle
 {
     SemiTruck(const std::string& n);
-    SemiTruck(const SemiTruck&);
-    ~SemiTruck() override;
+    SemiTruck(const SemiTruck&) = default;
+    ~SemiTruck() override = default;
+    SemiTruck& operator=(const SemiTruck&) = default;
+
     void pullOver();
     void pressTheBuzzer();
 };

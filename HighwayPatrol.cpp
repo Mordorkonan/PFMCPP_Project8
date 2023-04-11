@@ -7,8 +7,6 @@
 
 HighwayPatrol::HighwayPatrol() : Vehicle("HighwayPatrol") { }
 
-HighwayPatrol::~HighwayPatrol() { }
-
 void HighwayPatrol::scanHighway(Highway* h)
 {
     std::cout << name << ": scanning highway for speeders" << std::endl;
@@ -28,9 +26,9 @@ void HighwayPatrol::pullOver( Vehicle* v, bool willArrest, Highway* h )
 {
     std::cout << "\n\n";
     std::cout << name << ": vehicle is traveling " << v->speed - h->speedLimit << " miles per hour over the speed limit" << std::endl;
-    std::string vType = "Vehicle";
     if( willArrest )
     {
+        std::string vType = "Vehicle";
         //assert(false);
         if (auto* v_car = dynamic_cast<Car*>(v))
         {
